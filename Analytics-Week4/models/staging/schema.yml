@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: staging
+    database: "{{ env_var('DBT_DATABASE', 'ivory-period-444518-v9') }}"
+    schema:
+      "{{ env_var('DBT_SCHEMA', 'zoomcamp') }}"
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: green_tripdata
+  
+
