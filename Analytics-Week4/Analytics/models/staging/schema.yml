@@ -202,7 +202,8 @@ models:
     - name: stg_fhv_tripdata
       description: to be decided
       columns:
-      
+          - name:  dispatching_base_num
+            description: to be decided
           - name: pickup_datetime 
             description: The date and time when the meter was engaged.
           - name: dropoff_datetime 
@@ -220,8 +221,7 @@ models:
               - relationships:
                   to: ref('taxi_zone_lookup')
                   field: locationid
-          - name:  dispatching_base_num
-            description: to be decided
+        
           - name:  SR_Flag  
             description:  to be decided
          
