@@ -11,7 +11,7 @@ select
     CAST(pickup_datetime AS TIMESTAMP)) AS pickup_datetime,
     CAST(dropOff_datetime AS TIMESTAMP)) AS dropoff_datetime,
    , SR_Flag 
-from  {{ source('staging','fhv_tripdata`') }}
+from  {{ source('staging','fhv`') }}
 where extract( year from Pickup_locationid ) = 2019
 
 
