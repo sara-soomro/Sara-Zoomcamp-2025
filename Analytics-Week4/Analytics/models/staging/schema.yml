@@ -10,7 +10,8 @@ sources:
       - name: yellow_tripdata
          # freshness:
            # error_after: {count: 6, period: hour}
-      - name: fhv_tripdata_2019_ext
+      - name: fhv_tripdata  # External table
+      
 
 
 models:
@@ -223,6 +224,5 @@ models:
             description: to be decided
           - name:  SR_Flag  
             description:  to be decided
-          - name: Affiliated_base_number
-            description: to be decided.
+         
        
