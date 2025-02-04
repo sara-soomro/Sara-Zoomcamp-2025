@@ -22,8 +22,6 @@ As a hint, Kestra makes that process really easy:
 
 ![manually_set](https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week2/GCP_yellow_green2021.png)
 
-![loaded](https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week2/green_2021.png)
-
 
 ### Quiz Questions
 
