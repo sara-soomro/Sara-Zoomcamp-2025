@@ -56,12 +56,13 @@ ANSWER:
 - 18,324,219
 - 29,430,127
 
-## Solution: query in clickhouse:
+## Solution: query in BigQuery:
 ```sql
 SELECT count(tpep_pickup_datetime) 
-FROM zoomcamp.yellow_tripdata
-WHERE toYear(tpep_pickup_datetime) = 2020;
--- ANSWER: 24,648,499
+FROM ivory-period-444518-v9.zoomcamp.yellow_tripdata
+WHERE extract(year FROM tpep_pickup_datetime) = 2020;
+
+-- ANSWER: 24,648,544
 ```
 
 4) How many rows are there for the `Green` Taxi data for all CSV files in the year 2020?
@@ -70,12 +71,12 @@ WHERE toYear(tpep_pickup_datetime) = 2020;
 - 1,734,051
 - 1,342,034
 
-## Solution: query in clickhouse:
+## Solution: query in BigQuery:
 ```sql
 SELECT count(lpep_pickup_datetime) 
-FROM zoomcamp.green_tripdata
-WHERE toYear(lpep_pickup_datetime) = 2020;
--- ANSWER: 1,734,051
+FROM ivory-period-444518-v9.zoomcamp.green_tripdata
+WHERE extract(year FROM lpep_pickup_datetime) = 2020;
+-- 1734039
 ```
 
 5) How many rows are there for the `Yellow` Taxi data for the March 2021 CSV file?
@@ -84,13 +85,14 @@ WHERE toYear(lpep_pickup_datetime) = 2020;
 - 1,925,152
 - 2,561,031
 
-## Solution: query in clickhouse:
+## Solution: query in BigQuery:
 ```sql
 SELECT count(tpep_pickup_datetime) 
-FROM zoomcamp.yellow_tripdata
-WHERE toYear(tpep_pickup_datetime) = 2021
-  AND toMonth(tpep_pickup_datetime) = 3;
--- ANSWER: 1,925,152
+FROM ivory-period-444518-v9.zoomcamp.yellow_tripdata
+WHERE extract(year FROM tpep_pickup_datetime) = 2021 and 
+ extract(month FROM tpep_pickup_datetime) =03;
+ -- 1,925,130
+
 ```
 
 6) How would you configure the timezone to New York in a Schedule trigger?
