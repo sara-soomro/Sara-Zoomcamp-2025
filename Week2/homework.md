@@ -20,7 +20,7 @@ As a hint, Kestra makes that process really easy:
 
 2. Alternatively, run the flow manually for each of the seven months of 2021 for both `yellow` and `green` taxi data. Challenge for you: find out how to loop over the combination of Year-Month and `taxi`-type using `ForEach` task which triggers the flow for each combination using a `Subflow` task
 
-![manually_set](https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week2/yellow_2021.png)
+![manually_set](https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week2/GCP_yellow_green2021.png)
 
 ![loaded](https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week2/green_2021.png)
 
