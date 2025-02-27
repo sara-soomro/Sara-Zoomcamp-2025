@@ -61,13 +61,7 @@ models:
                   4=Nassau or Westchester
                   5=Negotiated fare
                   6=Group ride
-          - name: Store_and_fwd_flag 
-            description: > 
-              This flag indicates whether the trip record was held in vehicle
-              memory before sending to the vendor, aka “store and forward,”
-              because the vehicle did not have a connection to the server.
-                Y= store and forward trip
-                N = not a store and forward trip
+   
           - name: Dropoff_longitude 
             description: Longitude where the meter was disengaged.
           - name: Dropoff_latitude 
@@ -153,13 +147,7 @@ models:
                   4=Nassau or Westchester
                   5=Negotiated fare
                   6=Group ride
-          - name: Store_and_fwd_flag 
-            description: > 
-              This flag indicates whether the trip record was held in vehicle
-              memory before sending to the vendor, aka “store and forward,”
-              because the vehicle did not have a connection to the server.
-                Y= store and forward trip
-                N= not a store and forward trip
+ 
           - name: Dropoff_longitude 
             description: Longitude where the meter was disengaged.
           - name: Dropoff_latitude 
