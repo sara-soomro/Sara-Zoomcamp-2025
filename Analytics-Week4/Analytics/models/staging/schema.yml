@@ -2,14 +2,13 @@ version: 2
 
 sources:
   - name: staging
-    database: "{{ env_var('DBT_DATABASE', 'taxi-rides-ny-339813-412521') }}"
-    schema: "{{ env_var('DBT_SCHEMA', 'trips_data_all') }}"
+    database: "{{ env_var('DBT_DATABASE', 'ivory-period-444518-v9') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'zoomcamp') }}"
       # loaded_at_field: record_loaded_at
     tables:
-      - name: green_tripdata
+      - name: fhv_tripdata1 
+      - name: green_tripdata 
       - name: yellow_tripdata
-         # freshness:
-           # error_after: {count: 6, period: hour}
 
 models:
     - name: stg_green_tripdata
@@ -62,13 +61,7 @@ models:
                   4=Nassau or Westchester
                   5=Negotiated fare
                   6=Group ride
-          - name: Store_and_fwd_flag 
-            description: > 
-              This flag indicates whether the trip record was held in vehicle
-              memory before sending to the vendor, aka “store and forward,”
-              because the vehicle did not have a connection to the server.
-                Y= store and forward trip
-                N = not a store and forward trip
+   
           - name: Dropoff_longitude 
             description: Longitude where the meter was disengaged.
           - name: Dropoff_latitude 
@@ -154,13 +147,7 @@ models:
                   4=Nassau or Westchester
                   5=Negotiated fare
                   6=Group ride
-          - name: Store_and_fwd_flag 
-            description: > 
-              This flag indicates whether the trip record was held in vehicle
-              memory before sending to the vendor, aka “store and forward,”
-              because the vehicle did not have a connection to the server.
-                Y= store and forward trip
-                N= not a store and forward trip
+ 
           - name: Dropoff_longitude 
             description: Longitude where the meter was disengaged.
           - name: Dropoff_latitude 
@@ -194,3 +181,32 @@ models:
             description: Total amount of all tolls paid in trip.
           - name: Total_amount 
             description: The total amount charged to passengers. Does not include cash tips.
+
+
+    - name: fhv_tripdata1
+      description: to be decided
+      columns:
+          - name: dispatching_base_num
+            description: to be decided
+         
+          - name: Pickup_locationid
+            description: locationid where the meter was engaged.
+            tests:
+              - relationships:
+                  to: ref('taxi_zone_lookup')
+                  field: locationid
+                  severity: warn
+          - name: dropoff_locationid 
+            description: locationid where the meter was engaged.
+            tests:
+              - relationships:
+                  to: ref('taxi_zone_lookup')
+                  field: locationid
+          - name: pickup_datetime 
+            description: The date and time when the meter was engaged.
+          - name: dropoff_datetime 
+            description: The date and time when the meter was disengaged.
+          - name:  SR_Flag  
+            description:  to be decided
+         
+       
