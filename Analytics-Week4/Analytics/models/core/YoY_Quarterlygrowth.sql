@@ -8,17 +8,20 @@ quarterly_revenue as (
     SELECT 
         EXTRACT(YEAR FROM pickup_datetime) AS revenue_year,
         EXTRACT(QUARTER FROM pickup_datetime) AS revenue_quarter,
+        service_type,
         SUM(total_amount) AS revenue -- 
     FROM trips_data 
     where EXTRACT(YEAR FROM pickup_datetime) in (2019,2020) 
     GROUP BY 
         revenue_year,
-        revenue_quarter
+        revenue_quarter, 
+        service_type
 ),
 
 yoy_revenue_growth AS (
 
     SELECT 
+        present.service_type,
         present.revenue_year,
         present.revenue_quarter,
         present.revenue AS present_year_revenue,
@@ -33,6 +36,7 @@ yoy_revenue_growth AS (
 )
 -- Final output
 SELECT 
+    service_type,
     revenue_year,
     revenue_quarter,
     present_year_revenue,
