@@ -7,7 +7,7 @@
 with fhv_tripdata as (
     select *, 
         'fhv' as service_type
-    from {{ ref('stg_fhv_tripdata1') }}
+    from {{ ref('stg_S_fhv_tripdata_2019') }}
 ), 
 
 dim_zones as (
@@ -15,9 +15,10 @@ dim_zones as (
     where borough != 'Unknown'
 )
 select  
-  
+    Extract(year from pickup_datetime) as yr,
+    Extract(month from pickup_datetime)as mon,
+    TIMESTAMP_DIFF( dropOff_datetime ,pickup_datetime , SECOND) as trip_duration,
     fhv_tripdata.service_type,  
-    fhv_tripdata.dispatching_base_num,
     fhv_tripdata.Pickup_locationid, 
     pickup_zone.borough as pickup_borough, 
     pickup_zone.zone as pickup_zone, 
@@ -33,3 +34,4 @@ inner join dim_zones as pickup_zone
 on   fhv_tripdata.Pickup_locationid = pickup_zone.locationid
 inner join dim_zones as dropoff_zone
 on fhv_tripdata.dropoff_locationid = dropoff_zone.locationid
+
