@@ -15,4 +15,8 @@ Loaded data through Kestra yml files in the local postgress databse . learn the 
 Loaded Data in BigQuery  through GCP Bucket . first download data -> load to GCP and then make tables in BigQuery to make a big table containing data from multiple months 
 
 
+** Week4 **
+Week 4 is under the Analytics/Week4 folder - find all the dbt models in core/ staging folder 
+contains all the sql files to do all 7 questions .
+the images of BigQuery runs are added too . 
 
