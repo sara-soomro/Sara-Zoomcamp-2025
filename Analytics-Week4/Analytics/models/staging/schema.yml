@@ -6,7 +6,7 @@ sources:
     schema: "{{ env_var('DBT_SCHEMA', 'zoomcamp') }}"
       # loaded_at_field: record_loaded_at
     tables:
-      - name: fhv_tripdata1 
+      - name: S_fhv_tripdata_2019
       - name: green_tripdata 
       - name: yellow_tripdata
 
@@ -183,7 +183,7 @@ models:
             description: The total amount charged to passengers. Does not include cash tips.
 
 
-    - name: fhv_tripdata1
+    - name: S_fhv_tripdata_2019
       description: to be decided
       columns:
           - name: dispatching_base_num
