@@ -20,6 +20,7 @@ What's the output?
 
 > [!NOTE]
 > To install PySpark follow this [guide](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/05-batch/setup/pyspark.md)
+> https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week5/Q1.HW5.png
 
 
 ## Question 2: Yellow October 2024
