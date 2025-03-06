@@ -20,7 +20,7 @@ What's the output?
 
 > [!NOTE]
 > To install PySpark follow this [guide](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/05-batch/setup/pyspark.md)
-> https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week5/Q1.HW5.png
+> ![alt text](https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week5/Q1.HW5.png)
 
 
 ## Question 2: Yellow October 2024
@@ -36,7 +36,8 @@ What is the average size of the Parquet (ending with .parquet extension) Files t
 - 75MB
 - 100MB
 
-ls -lh 
+
+> ![alt text](https://github.com/sara-soomro/Sara-Zoomcamp-2025/blob/main/Week5/Q2-HW5.png)
 
 ## Question 3: Count records 
 
