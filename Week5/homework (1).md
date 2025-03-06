@@ -35,6 +35,7 @@ What is the average size of the Parquet (ending with .parquet extension) Files t
 - 75MB
 - 100MB
 
+ls -lh 
 
 ## Question 3: Count records 
 
@@ -47,7 +48,7 @@ Consider only trips that started on the 15th of October.
 - 125,567
 - 145,567
 
-
+ANSWER : chech the Homework5.ipynb
 ## Question 4: Longest trip
 
 What is the length of the longest trip in the dataset in hours?
