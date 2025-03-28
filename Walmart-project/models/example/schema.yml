@@ -1,0 +1,20 @@
+
+version: 2
+
+
+sources:
+  - name: staging
+    database: "{{ env_var('DBT_DATABASE', 'inspiring-code-453522-m5') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'soomro_zoomcamp_DS') }}"
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: Walmart_customer_purchases_partitioned
+
+
+models:
+    - name: Walmart_data
+      description: "A starter dbt model"
+     
+       
+ 
+        
